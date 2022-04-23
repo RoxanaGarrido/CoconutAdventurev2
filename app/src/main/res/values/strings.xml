@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Coconut Adventure</string>
 
+    <string name="level0">Coconut is a white rabbit who lives in a peaceful and forgotten
+        village, where the trees speak and the stones listen…</string>
+
 </resources>

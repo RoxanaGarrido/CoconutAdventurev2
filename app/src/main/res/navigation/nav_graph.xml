@@ -13,9 +13,26 @@
         <action
             android:id="@+id/action_startFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_levelFragment"
+            app:destination="@id/levelFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="cat.copernic.rgarrido.coconutadventure.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.LevelFragment"
+        android:label="fragment_level"
+        tools:layout="@layout/fragment_level" >
+        <action
+            android:id="@+id/action_levelFragment_to_l0Fragment"
+            app:destination="@id/l0Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/l0Fragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.L0Fragment"
+        android:label="fragment_l0"
+        tools:layout="@layout/fragment_l0" />
 </navigation>

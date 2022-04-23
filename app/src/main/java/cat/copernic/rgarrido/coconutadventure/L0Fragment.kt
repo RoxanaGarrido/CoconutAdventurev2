@@ -1,20 +1,17 @@
 package cat.copernic.rgarrido.coconutadventure
 
-import android.content.pm.ActivityInfo
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import cat.copernic.rgarrido.coconutadventure.databinding.FragmentStartBinding
-import cat.copernic.rgarrido.coconutadventure.databinding.GlobalFragmentBinding
+import cat.copernic.rgarrido.coconutadventure.databinding.FragmentL0Binding
 
-class GlobalFragment : Fragment() {
 
-    private lateinit var binding: GlobalFragmentBinding
+class L0Fragment : Fragment() {
 
+    private lateinit var binding:FragmentL0Binding
     private val sharedViewModel: SharedViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,13 +23,19 @@ class GlobalFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = GlobalFragmentBinding.inflate(inflater, container, false)
+      binding = FragmentL0Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    }
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.globalData = sharedViewModel
 
+        binding.tvL0.setText("")
+        binding.tvL0.setCharacterDelay(10)
+        binding.tvL0.animateText(getString(R.string.level0))
+
+    }
 }

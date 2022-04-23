@@ -9,6 +9,7 @@
         <EditTextPreference
             app:key="name"
             app:title="Your name"
+            app:defaultValue="Name"
             app:useSimpleSummaryProvider="true" />
 
         <ListPreference
@@ -26,7 +27,7 @@
         app:title="Music">
 
         <SwitchPreferenceCompat
-            app:defaultValue="true"
+            app:defaultValue="false"
             app:key="music"
             app:title="Turn On" />
 
