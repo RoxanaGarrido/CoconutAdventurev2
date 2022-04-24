@@ -64,4 +64,9 @@
         android:name="cat.copernic.rgarrido.coconutadventure.L2Fragment"
         android:label="fragment_l2"
         tools:layout="@layout/fragment_l2" />
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" />
 </navigation>

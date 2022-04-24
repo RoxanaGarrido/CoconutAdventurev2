@@ -2,6 +2,7 @@ package cat.copernic.rgarrido.coconutadventure
 
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.preference.PreferenceManager
 
 class MainActivity : AppCompatActivity() {
+
+    private val sharedViewModel: SharedViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +45,17 @@ class MainActivity : AppCompatActivity() {
 
         //Configuración para que la app solo esté en modo landscape
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+
+
+//        val mp = MediaPlayer.create(this, R.raw.theme1)
+//        sharedViewModel.mediaPlayer =  mp
     }
 
+    override fun onBackPressed() {
+        if (sharedViewModel.backPressDisable) {
+
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
