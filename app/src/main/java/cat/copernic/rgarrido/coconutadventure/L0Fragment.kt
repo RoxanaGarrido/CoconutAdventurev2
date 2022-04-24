@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import cat.copernic.rgarrido.coconutadventure.databinding.FragmentL0Binding
 
 
@@ -33,9 +34,11 @@ class L0Fragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.globalData = sharedViewModel
 
-        binding.tvL0.setText("")
-        binding.tvL0.setCharacterDelay(10)
-        binding.tvL0.animateText(getString(R.string.level0))
+        sharedViewModel.typewriter(binding.tvL0, getString(R.string.level0))
+
+        binding.btNext.setOnClickListener{
+            findNavController().navigate(R.id.action_l0Fragment_to_l01Fragment)
+        }
 
     }
 }

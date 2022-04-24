@@ -4,4 +4,8 @@
     <string name="level0">Coconut is a white rabbit who lives in a peaceful and forgotten
         village, where the trees speak and the stones listen…</string>
 
+    <string name="level01">Now he is looking for something to eat! Where should he go? To the Forest or to the Cave?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

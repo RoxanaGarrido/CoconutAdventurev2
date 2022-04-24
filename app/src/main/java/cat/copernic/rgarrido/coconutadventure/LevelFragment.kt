@@ -31,6 +31,9 @@ class LevelFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var level = requireArguments().getString("Level")
+        binding.tvLevelTittle.text = level
+
         sharedViewModel.progressBar(binding.progressBar)
 
         object : CountDownTimer( 5000, 200) {
@@ -46,7 +49,12 @@ class LevelFragment : Fragment() {
             }
 
             override fun onFinish() {
-               findNavController().navigate(R.id.action_levelFragment_to_l0Fragment)
+                when(level){
+                    "Level 0" -> findNavController().navigate(R.id.action_levelFragment_to_l0Fragment)
+                    "Level 1" -> findNavController().navigate(R.id.action_levelFragment_to_l1Fragment)
+                    "Level 2" -> findNavController().navigate(R.id.action_levelFragment_to_l2Fragment)
+                }
+
             }
         }.start()
     }

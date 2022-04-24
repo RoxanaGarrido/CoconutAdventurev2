@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/press_start_2p"
-            android:text="0000000"
+            android:text="@{globalData.score.toString()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvScoreLabel" />
 
@@ -63,6 +63,7 @@
             android:layout_marginBottom="10dp"
             android:text="Coded By R. Garrido"
             android:textSize="10sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -74,6 +75,7 @@
             android:layout_marginBottom="10dp"
             android:text="Art By M. Garrido"
             android:textSize="10sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -84,6 +86,7 @@
             android:layout_marginBottom="10dp"
             android:text="Music By E. Parra"
             android:textSize="10sp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tvArtBy"
             app:layout_constraintStart_toEndOf="@+id/tvByR" />

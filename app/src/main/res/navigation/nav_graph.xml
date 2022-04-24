@@ -29,10 +29,39 @@
         <action
             android:id="@+id/action_levelFragment_to_l0Fragment"
             app:destination="@id/l0Fragment" />
+        <action
+            android:id="@+id/action_levelFragment_to_l1Fragment"
+            app:destination="@id/l1Fragment" />
+        <action
+            android:id="@+id/action_levelFragment_to_l2Fragment"
+            app:destination="@id/l2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/l0Fragment"
         android:name="cat.copernic.rgarrido.coconutadventure.L0Fragment"
         android:label="fragment_l0"
-        tools:layout="@layout/fragment_l0" />
+        tools:layout="@layout/fragment_l0" >
+        <action
+            android:id="@+id/action_l0Fragment_to_l01Fragment"
+            app:destination="@id/l01Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/l01Fragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.L01Fragment"
+        android:label="fragment_l01"
+        tools:layout="@layout/fragment_l01" >
+        <action
+            android:id="@+id/action_l01Fragment_to_levelFragment"
+            app:destination="@id/levelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/l1Fragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.L1Fragment"
+        android:label="fragment_l1"
+        tools:layout="@layout/fragment_l1" />
+    <fragment
+        android:id="@+id/l2Fragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.L2Fragment"
+        android:label="fragment_l2"
+        tools:layout="@layout/fragment_l2" />
 </navigation>

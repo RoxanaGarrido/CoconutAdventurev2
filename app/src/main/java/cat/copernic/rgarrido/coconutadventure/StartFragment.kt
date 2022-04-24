@@ -20,6 +20,7 @@ class StartFragment : Fragment() {
     private lateinit var binding: FragmentStartBinding
     private val sharedViewModel: SharedViewModel by activityViewModels()
     lateinit var mp :MediaPlayer
+    val bundle = Bundle()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,8 @@ class StartFragment : Fragment() {
         }
 
         binding.btStart.setOnClickListener{
-            findNavController().navigate(R.id.action_startFragment_to_levelFragment)
+            bundle.putString("Level", "Level 0")
+            findNavController().navigate(R.id.action_startFragment_to_levelFragment, bundle)
         }
     }
 
