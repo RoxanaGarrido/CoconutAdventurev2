@@ -58,7 +58,11 @@
         android:id="@+id/l1Fragment"
         android:name="cat.copernic.rgarrido.coconutadventure.L1Fragment"
         android:label="fragment_l1"
-        tools:layout="@layout/fragment_l1" />
+        tools:layout="@layout/fragment_l1" >
+        <action
+            android:id="@+id/action_l1Fragment_to_l1_1Fragment"
+            app:destination="@id/l1_1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/l2Fragment"
         android:name="cat.copernic.rgarrido.coconutadventure.L2Fragment"
@@ -69,4 +73,13 @@
         android:name="cat.copernic.rgarrido.coconutadventure.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" />
+    <fragment
+        android:id="@+id/l1_1Fragment"
+        android:name="cat.copernic.rgarrido.coconutadventure.L1_1Fragment"
+        android:label="fragment_l1_1"
+        tools:layout="@layout/fragment_l1_1" >
+        <action
+            android:id="@+id/action_l1_1Fragment_to_levelFragment"
+            app:destination="@id/levelFragment" />
+    </fragment>
 </navigation>

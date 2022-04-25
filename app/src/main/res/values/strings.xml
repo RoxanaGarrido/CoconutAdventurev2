@@ -5,7 +5,18 @@
         village, where the trees speak and the stones listen…</string>
 
     <string name="level01">Now he is looking for something to eat! Where should he go? To the Forest or to the Cave?</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="help">\¿?</string>
+
+    <string name="level1">Inside the forest, coconut finds three dark strawberries and one red strawberry. What do you prefer?</string>
+
+
+    <string name="question1">Hello Coconut, I can help you find more strawberries if you answer,
+        what is never borrowed, but often returned?</string>
+
+    <string name="exito1">Yes! You are right…\nHere your reward </string>
+
+
+    <string name="fail1">Ops! You loose 1 life</string>
 
 </resources>

@@ -129,7 +129,7 @@
             app:layout_constraintStart_toEndOf="@+id/tvByR" />
 
         <LinearLayout
-            android:layout_width="70dp"
+            android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginEnd="170dp"
             android:orientation="horizontal"
@@ -152,7 +152,7 @@
                 app:srcCompat="@drawable/fresa_red" />
 
             <ImageView
-                android:id="@+id/ivLiveFresa3"
+                android:id="@+id/ivFresaLive3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

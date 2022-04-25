@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="globalData"
+            type="cat.copernic.rgarrido.coconutadventure.SharedViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".L1_1Fragment">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/global_fragment"
+            app:globalData="@{globalData}"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <cat.copernic.rgarrido.coconutadventure.TypeWriter
+            android:id="@+id/tvL1_1"
+            android:layout_width="436dp"
+            android:layout_height="66dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:textColor="#FFFEFE"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/include"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="722dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/forest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCoco2"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:src="@drawable/coco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.639" />
+
+        <ImageView
+            android:id="@+id/ivRana"
+            android:layout_width="94dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="75dp"
+            android:src="@drawable/frog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toEndOf="@+id/ivCoco2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="30sp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivCoco2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btThanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thanks"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btGifts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gifts"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btChecks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checks"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="86dp"
+            android:clickable="true"
+            android:src="@drawable/icon_help"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/include"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ivRana"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594" />
+
+        <ImageView
+            android:id="@+id/ivSuperFresa"
+            android:layout_width="162dp"
+            android:layout_height="123dp"
+            android:src="@drawable/fresa_red"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/ivRana"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.785"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btNext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:clickable="true"
+            android:src="@drawable/arrow_r"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.922"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.954"
+            app:rippleColor="#009688" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

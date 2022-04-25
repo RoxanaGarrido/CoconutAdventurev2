@@ -94,7 +94,7 @@ class StartFragment : Fragment() {
         sharedViewModel.volume.value = sp.getInt("volume", 50).toFloat()
     }
 
-
+//Método que lleva cuenta regresiva del juego y cuando termina navega al Game Over Screen
     fun timerCoroutine(){
         lifecycleScope.launch{
             object : CountDownTimer( 300000, 200) {
@@ -102,11 +102,10 @@ class StartFragment : Fragment() {
                     var milis = millisUntilFinished / 1000
                     sharedViewModel.timer.value = milis
 
-                    if(milis == 60000L){
+                    if(milis == 60L){
                         Toast.makeText(context, "Hurry Up! 1 minute left!", Toast.LENGTH_SHORT).show()
                     }
                 }
-
                 override fun onFinish() {
                     findNavController().navigate(R.id.gameOverFragment)
                 }

@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
 //        sharedViewModel.mediaPlayer =  mp
     }
 
+    //Después de empezar el juego, se deshabilita la opción de ir atrás
     override fun onBackPressed() {
         if (sharedViewModel.backPressDisable) {
 
