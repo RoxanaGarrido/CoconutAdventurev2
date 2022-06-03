@@ -10,6 +10,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import cat.copernic.rgarrido.coconutadventure.databinding.FragmentLevelBinding
 
+/**
+ * Fragmento que controla la animación del progressbar
+ * al pasar de un nivel a otro
+ */
 class LevelFragment : Fragment() {
 
     private lateinit var binding: FragmentLevelBinding

@@ -35,6 +35,7 @@ class L1_1Fragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.globalData = sharedViewModel
 
+        sharedViewModel.persistLifes(binding.include.ivFresaLive1, binding.include.ivFresaLive2, binding.include.ivFresaLive3)
         sharedViewModel.appear(binding.ivRana)
         sharedViewModel.appear(binding.btQuestion)
 
@@ -50,6 +51,7 @@ class L1_1Fragment : Fragment() {
         binding.btThanks.setOnClickListener {
             sharedViewModel.appear(binding.ivSuperFresa)
             sharedViewModel.typewriter(binding.tvL11, getString(R.string.exito1))
+            binding.btQuestion.visibility = View.INVISIBLE
             sharedViewModel.appear(binding.btNext1)
         }
 

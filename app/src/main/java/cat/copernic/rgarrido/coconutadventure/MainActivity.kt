@@ -16,6 +16,7 @@ import androidx.preference.PreferenceManager
 class MainActivity : AppCompatActivity() {
 
     private val sharedViewModel: SharedViewModel by viewModels()
+    lateinit var mp : MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,16 +48,26 @@ class MainActivity : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
 
-//        val mp = MediaPlayer.create(this, R.raw.theme1)
-//        sharedViewModel.mediaPlayer =  mp
+        //mp = MediaPlayer.create(this, R.raw.theme1)
+
     }
 
-    //Después de empezar el juego, se deshabilita la opción de ir atrás
+    /**
+     * Después de empezar el juego, se deshabilita la opción de ir atrás
+     */
     override fun onBackPressed() {
         if (sharedViewModel.backPressDisable) {
 
         } else {
             super.onBackPressed();
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //Resetear valores de settings a default
+        PreferenceManager.setDefaultValues(this, R.xml.root_preferences, true)
+        val sp:SharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        sp.edit().clear().apply()
     }
 }

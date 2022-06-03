@@ -19,4 +19,6 @@
 
     <string name="fail1">Ops! You loose 1 life</string>
 
+    <string name="construction">Sorry! This level and the rest of the game are under construction :(</string>
+
 </resources>

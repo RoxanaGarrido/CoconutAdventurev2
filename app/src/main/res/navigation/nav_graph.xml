@@ -72,7 +72,11 @@
         android:id="@+id/gameOverFragment"
         android:name="cat.copernic.rgarrido.coconutadventure.GameOverFragment"
         android:label="fragment_game_over"
-        tools:layout="@layout/fragment_game_over" />
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
     <fragment
         android:id="@+id/l1_1Fragment"
         android:name="cat.copernic.rgarrido.coconutadventure.L1_1Fragment"

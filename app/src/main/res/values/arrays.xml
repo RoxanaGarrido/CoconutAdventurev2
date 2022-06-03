@@ -2,21 +2,25 @@
     <!-- Language Preference -->
     <string-array name="language_entries">
         <item>English</item>
-        <item>Español</item>
+        <!--item>Español</item-->
     </string-array>
 
     <string-array name="language_values">
         <item>eng</item>
-        <item>esp</item>
-    </string-array>
-    <!-- Reply Preference -->
-    <string-array name="reply_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
+        <!--item>esp</item-->
     </string-array>
 
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
+    <!-- Modo de juego -->
+    <string-array name="difficult_entries">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
     </string-array>
+
+    <string-array name="difficult_values">
+        <item>ea</item>
+        <item>me</item>
+        <item>ha</item>
+    </string-array>
+
 </resources>

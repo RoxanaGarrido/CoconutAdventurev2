@@ -18,16 +18,17 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/press_start_2p"
             android:gravity="center"
-            android:text="Game Over"
+            android:text="Game Over\n..."
             android:textSize="60sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.375" />
+            app:layout_constraintVertical_bias="0.347" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="129dp"
             android:layout_marginTop="50dp"
@@ -75,15 +76,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Music By"
-                android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ernesto Parra"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
